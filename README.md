@@ -12,5 +12,5 @@ As you complete a task, add your solution to this repository as a python file an
 
 Date | Task    
 ------------ | ------------
-
+26/6/2019|1-9
 
