@@ -73,7 +73,7 @@ def factorial(number):
     return total
 
 def checkRange(number,range):
-    ''' checks wether a given number is within the given range'''
+    ''' checks whether a given number is within the given range'''
     inRange = False
     if number >= range[0]:
         if number <= range[1]:
@@ -108,7 +108,7 @@ def uniqueList(list):
     return uniqueList
 
 def checkPrime(number):
-    ''' checks whether a number is prime or not'''
+    ''' checks wether a number is prime or not'''
     if number == 1:
         prime = True
     elif number == 2:
@@ -124,5 +124,39 @@ def checkPrime(number):
     print('prime is '+ str(prime))
     return prime
 
-            
-        
+def printEven(list):
+    i = 0
+    while i < len(list):
+        if list[i] % 2 == 0:
+            print(str(list[i])+ " is even at index " + str(i))
+        i +=1
+
+def checkPerfect(number):
+    ''' Checks whether the number is perfect or not
+    this includes checking if the divisors of the number adds to the number'''
+    divisors = []
+    for i in range(1,number): #note that this wont include 6
+        if number % i == 0:
+            divisors.append(i)
+    total = sum(divisors) 
+    if total == number:
+        perfect = True
+    else:
+        perfect = False
+    print('Is ' + str(number) + " perfect : " + str(perfect))
+    return perfect
+
+def checkPalindrome(string):
+    '''checks whether a string is palindrome, a palindrome is a string that reads backwards'''
+    first = 0
+    last = len(string)-1
+    while first < last:
+        if string[first] == string[last]:
+            palindrome = True
+        else:
+            palindrome = False
+            break
+        first +=1
+        last -=1
+    print('is '+string+' a palindrome : '+str(palindrome))
+    return palindrome  
